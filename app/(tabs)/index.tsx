@@ -17,7 +17,7 @@ export default function Index() {
       <Text style={styles.title}>Mini Task App</Text>
       <Text style={styles.subtitle}>Welcome user</Text>
 
-      <Pressable style={styles.button} onPress={() => router.push("/tasks")}>
+      <Pressable style={styles.button} onPress={() => router.push("/(tabs)/tasks/tasks")}>
         <Text style={styles.buttonText}>Open Tasks</Text>
       </Pressable>
     </View>

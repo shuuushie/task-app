@@ -28,13 +28,25 @@ export default function Tasks() {
     }, []),
   );
 
-  const handleDelete = (id: number) => {
-    try {
-      deleteTask(id);
-      loadTasks();
-    } catch (error) {
-      Alert.alert("Delete Error", "Failed to delete task");
-    }
+   const handleDelete = (id: number) => {
+    Alert.alert("Delete Task", "Are you sure you want to delete this task?", [
+      {
+        text: "Cancel",
+        style: "cancel",
+      },
+      {
+        text: "Delete",
+        style: "destructive",
+        onPress: () => {
+          try {
+            deleteTask(id);
+            loadTasks();
+          } catch (error) {
+            Alert.alert("Delete Error", "Failed to delete task");
+          }
+        },
+      },
+    ]);
   };
 
   return (
@@ -43,7 +55,7 @@ export default function Tasks() {
 
       <Pressable
         style={styles.addButton}
-        onPress={() => router.push("/add-task")}
+        onPress={() => router.push("/(tabs)/tasks/add-task")}
       >
         <Text style={styles.addButtonText}>Add Task</Text>
       </Pressable>
@@ -65,7 +77,7 @@ export default function Tasks() {
                   style={styles.detailButton}
                   onPress={() =>
                     router.push({
-                      pathname: "/task-detail",
+                      pathname: "/(tabs)/tasks/task-detail",
                       params: {
                         id: item.id,
                         title: item.title,
