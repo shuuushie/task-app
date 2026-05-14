@@ -5,7 +5,7 @@ export default function TasksLayout() {
     <Stack
       screenOptions={{
         headerStyle: {
-          backgroundColor: "#111",
+          backgroundColor: "#2244df",
         },
         headerTintColor: "#fff",
         headerTitleStyle: {

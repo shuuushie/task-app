@@ -120,7 +120,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
   },
   statusButtonActive: {
-    backgroundColor: "#111",
+    backgroundColor: "#0f8915",
     borderColor: "#111",
   },
   statusButtonText: {
@@ -136,7 +136,7 @@ const styles = StyleSheet.create({
     marginBottom: 16,
   },
   button: {
-    backgroundColor: "#111",
+    backgroundColor: "#088312",
     padding: 14,
     borderRadius: 8,
   },
