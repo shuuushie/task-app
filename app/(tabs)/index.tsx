@@ -17,7 +17,7 @@ export default function Index() {
       <Text style={styles.title}>Mini Task App</Text>
       <Text style={styles.subtitle}>Welcome user</Text>
 
-      <Pressable style={styles.button} onPress={() => router.push("/tasks")}>
+      <Pressable style={styles.button} onPress={() => router.push("/(tabs)/tasks/tasks")}>
         <Text style={styles.buttonText}>Open Tasks</Text>
       </Pressable>
     </View>
@@ -41,7 +41,7 @@ const styles = StyleSheet.create({
     marginBottom: 12,
   },
   button: {
-    backgroundColor: "#222",
+    backgroundColor: "#4a21a9",
     paddingHorizontal: 18,
     paddingVertical: 12,
     borderRadius: 8,
